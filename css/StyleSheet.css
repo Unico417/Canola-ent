@@ -1,0 +1,619 @@
+@import url('https://fonts.googleapis.com/css2?family=Julius+Sans+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Play&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&display=swap');
+:root{
+    --dark: #23272a;
+    --dark-2: #33393D;
+    --dark-3: #464E54;
+    --dark-4: #606B72;
+    --dark-footer:#2c3135;
+    --white: #dddddd;
+    --darker-white: #bbbbbb;
+    --green: #008F00;
+    --light-green: #8df78d;
+    --brown: #B55A00;
+    --yellow: #FFFFA0;
+}
+
+/* #region gloval */
+
+html, body{
+    color: var(--white);
+    background-color: var(--dark);
+    font-size: max(1.2vw, 17px);
+    scroll-behavior: smooth;
+}
+
+header{
+    background-color: var(--dark-4);
+}
+
+article{
+    margin: 0 2em;
+}
+
+section{
+    margin-bottom: 3em;
+}
+
+footer{
+    background-color: var(--dark-footer);
+    height: 6em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--darker-white);
+    font-size: 0.75em;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+h1{
+    margin: 4em 0em 1em 0em;
+    font-size: 1.75em;
+    text-align: center;
+    background: rgb(35,39,42);
+    background: linear-gradient(90deg, rgba(35,39,42,1) 0%, rgba(87,87,87,1) 15%, rgba(87,87,87,1) 85%, rgba(35,39,42,1) 100%);
+}
+
+details{
+    margin: 1em;
+    padding: 0.5em;
+    background-color: var(--dark-2);
+    border-radius: 0.5em;
+}
+
+/* #endregion */
+
+/* #region gloval-navi */
+
+.g-nav{
+    display: flex;
+    justify-content: space-between;
+    height: 5em;
+}
+
+.logo{
+    position: relative;
+    font-family: 'Julius Sans One';
+    width: 50%;
+}
+
+.logo a{
+    height: 100%;
+    font-style: normal;
+    font-family: 'Julius Sans One'
+}
+
+.logo p{
+    font-size: 1.35em;
+    position: absolute;
+    top: calc(50% - 0.5em);
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.navi{
+    width: 50%;
+    font-size: 0.85em;
+}
+
+.navi a{
+    display: flex;
+    align-items: center;
+    transition: 0.4s;
+    height: 100%;
+    padding: 0 2em;
+}
+.navi a:hover{
+    background-color: var(--dark-3);
+}
+
+.navi ul{
+    margin: 0;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    opacity: 1;
+}
+
+.navi li{
+    width: 100%;
+    margin: auto 0;
+    display: inline-block;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 1.5em;
+}
+
+.top-img{
+    margin: 0;
+    padding: 0;
+}
+
+.top-img img{
+    width: 100%;
+    height: auto;
+    max-height: 40vh;
+    object-fit: cover;
+}
+
+/* #endregion */
+
+/* #region index */
+.slogan{
+    height: 5em;
+    position: relative;
+    font-family: 'Courgette';
+    margin: 7.5em 0;
+    text-align: center;
+}
+.slogan p:nth-child(1){
+    position: absolute;
+    top: calc(50% - 1em);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 3em;
+    opacity: 0.25;
+}
+.slogan p:nth-child(2){
+    position: absolute;
+    top: calc(50% - 0.25em);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    opacity: 1.0;
+    font-size: 1.5em;
+}
+
+.work{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    row-gap: 0.5em;
+    column-gap: auto;
+}
+
+.work div{
+    width: 48%;
+    position: relative;
+}
+
+.work div img{
+    object-fit: cover;
+    filter: drop-shadow(5px 5px 3px black);
+    transition: filter 0.5s;
+    border: 1px solid var(--dark-3);
+}
+
+.work div .mask{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 1px;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: 0.5s;
+}
+.work div .mask:hover{
+    opacity: 1;
+}
+
+.work div .mask p{
+    width: 50%;
+    display: inline-block;
+    position: absolute;
+    top: calc(50% - 0.75em);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    font-size: 3em;
+    text-align: center;
+    opacity: 0.9;
+}
+/* #endregion */
+
+/* #region BAR */
+#bar-infomation h2, .bar-attention h2, #video-live h2 {
+    position: relative;
+    padding: 0.25em 0;
+}
+#bar-infomation h2:after, .bar-attention h2:after, #video-live h2:after {
+    content: "";
+    display: block;
+    height: 4px;
+    background: -webkit-linear-gradient(to right, #005212, transparent);
+    background: linear-gradient(to right, #005212, transparent);
+}
+
+.bar-info{
+    display: flex;
+    justify-content: center;
+    column-gap: 2em;
+    margin-bottom: 2em;
+}
+
+.bar-info-description{
+    width: 35%;
+}
+
+.bar-info-pic{
+    width: 60%;
+}
+
+.bar-info-description p{
+    margin-bottom: 2em;
+}
+
+
+
+.bar-info-2{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2em;
+    justify-content: space-between;
+    font-family: "Play";
+}
+
+.bar-info-2 div{
+    font-size: 2em;
+    width: 32%;
+    height: 4em;
+    text-align: center;
+    transition: filter 0.25s;
+    overflow: visible;
+}
+.bar-info-2 div:hover{
+    filter: brightness(150%) drop-shadow(5px 5px 3px black);
+}
+
+.bar-info-2 .fanbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 1em 0;
+    width: 100%;
+    height: 3em;
+    font-size: 1.5em;
+    font-weight: bold;
+    background-color: rgb(207, 70, 145);
+    font-family: 'Hachi Maru Pop';
+}
+
+.bar-info-2 a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.bar-info-2 div img{
+    height: 1.25em;
+    width: auto;
+    padding-right: 0.25em;
+}
+
+.bar-info-2 div span{
+    font-size: 0.5em;
+    margin-left: 0.5em;
+}
+
+.bar-info-2 .yt-videolog{
+    background-color: purple;
+}
+
+.bar-info-2 .yt-live{
+    background-color: #AA0000;
+}
+
+.bar-info-2 .twitch-live{
+    background-color: #6444A3;
+}
+
+.bar-event{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bar-event .event{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 2em 0;
+}
+
+.bar-event .event:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+.bar-event .event h2{
+    font-size: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+.bar-event .event h2 span{
+    display: flex;
+	align-items: center;
+	color: #498ee0;
+	font-size: 0.6em;
+	text-transform: uppercase;
+    opacity: 0.75;
+}
+
+
+.bar-event-pic{
+    width: 35%;
+}
+.bar-event-pic img{
+    width: 100%;
+    filter: drop-shadow(5px 5px 3px black);
+}
+.bar-event-description{
+    display: inline-block;
+    width: 62%;
+}
+
+.atrangel-staff{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 1em;
+}
+
+.staff{
+    width: 29%;
+    padding: 1.5%;
+    background-color: var(--dark-2);
+    border: 1px solid var(--dark-4);
+    filter: drop-shadow(5px 5px 3px black);
+}
+
+.staff h2{
+    position: relative;
+    display: inline-block;
+    margin-bottom: 1em;
+    width: 100%;
+    text-align: center;
+}
+.staff h2:before{
+    content: '';
+    position: absolute;
+    bottom: -15px;
+    display: inline-block;
+    width: 60px;
+    height: 5px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    background-color: var(--dark-4);
+    border-radius: 2px;
+}
+
+.staff img{
+    width: 75%;
+    height: auto;
+    margin: 1em 12.5%;
+    filter: drop-shadow(5px 5px 3px black);
+}
+
+.role{
+    font-size: 1.2em;
+    margin: 0.5em 0;
+}
+
+.staff-description{
+    font-size: 0.9em;
+    color: var(--darker-white);
+}
+
+.bar-attention{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.bar-attention div{
+    width: 45%;
+}
+
+.bar-attention ul{
+    margin: 1em 0 0 2em;
+}
+
+.bar-attention p span{
+    font-size: 0.85em;
+    color: var(--darker-white);
+}
+
+/* #endregion */
+
+/* #region songs */
+
+.album-list{
+    width: 90%;
+    margin: 1.5em auto;
+    background-color: var(--dark-2);
+    padding: 1em;
+    border-radius: 0.5em;
+}
+
+.album{
+    margin: 0.5em;
+    padding: 1em;
+    border-radius: 0.5em;
+    transition: 0.3s;
+}
+.album:hover{
+    background-color: var(--dark-3);
+    filter: drop-shadow(5px 5px 3px var(--dark));
+}
+
+.album-title{
+    text-align: left;
+}
+
+.album-info{
+    text-align: left;
+    font-size: 0.9em;
+}
+
+.album-tag{
+    display: inline-block;
+    background-color: var(--dark-4);
+    font-size: 0.75rem;
+    margin-left: 1em;
+    padding: 0 0.5em;
+}
+
+.album-image-cell{
+    width: 15%;
+    height: 15%;
+    padding-right: 2em;
+    filter: drop-shadow(5px 5px 3px var(--dark));
+}
+.album-image{
+    width: 100%;
+    height: 100%;
+    border: 2px solid var(--dark-3);
+}
+
+.album-value{
+    padding-right: 2em;
+    text-align: center;
+    font-size: 0.85em;
+}
+
+.album-seller{
+    text-align: right;
+}
+
+.album-seller img{
+    width: auto;
+    height: 2em;
+    padding-left: 0.25em;
+}
+
+/* #endregion */
+
+/* #region stream-video */
+
+.stream-list{
+    display: flex;
+    justify-content: space-around;
+    
+}
+
+.stream-member{
+    width: 30%;
+}
+
+.stream-member-description{
+    font-size: 0.85em;
+    color: var(--darker-white);
+}
+
+.stream-contents{
+    margin-top: 2em;
+    justify-content: center;
+    font-size: 0.75em;
+    font-family: "Play";
+}
+
+.stream-contents div{
+    font-size: 2em;
+    height: 3em;
+    margin-bottom: 0.25em;
+    text-align: center;
+    transition: filter 0.25s;
+}
+.stream-contents div:hover{
+    filter: brightness(150%) drop-shadow(5px 5px 3px black);
+}
+
+.stream-contents a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.stream-contents div img{
+    height: 1.25em;
+    width: auto;
+    padding-right: 0.25em;
+}
+
+.stream-contents div span{
+    font-size: 0.5em;
+    margin-left: 0.5em;
+}
+
+.stream-contents .yt-videolog{
+    background-color: purple;
+}
+
+.stream-contents .yt-live{
+    background-color: #AA0000;
+}
+
+.stream-contents .twitch-live{
+    background-color: #6444A3;
+}
+
+/* #endregion */
+
+/* #region Slick */
+.job-offer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.job-slick{
+    width: 50%;
+}
+/* #endregion */
+
+
+
+@media screen and (min-width: 960px) {
+    .g-nav{
+        padding: 0 12.5%;
+    }
+    
+    article {
+        width: 75%;
+        margin: 0 auto;
+    }
+}
+  
+
+@media screen and (min-width: 1200px) {
+    .staff{
+        width: 21%;
+    }
+}
+
+@media screen and (max-width: 520px){
+
+}
+
+section.request{
+    display: none;
+}

@@ -1,0 +1,3 @@
+$('.job-slick').slick({
+
+});
