@@ -525,6 +525,20 @@ section {
 }
 
 @media screen and (max-width: 700px) {
+  #gnav .company-name {
+    margin: 0 0 0 .5em;
+  }
+  #gnav .navi {
+    margin: 0;
+  }
+  #gnav ul {
+    margin-left: 1em;
+    gap: 0;
+  }
+  #gnav ul li {
+    margin: .5em .75em;
+    list-style: none;
+  }
   #bar header h1 {
     font-size: 2em;
   }
