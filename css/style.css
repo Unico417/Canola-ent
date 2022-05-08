@@ -39,15 +39,6 @@ section {
 }
 
 #gnav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: fixed;
   font-family: 'Spinnaker';
   top: 0;
@@ -57,27 +48,55 @@ section {
   z-index: 10;
 }
 
-#gnav .company-name a,
-#gnav ul a {
+#gnav a {
   color: inherit;
   text-decoration: none;
+}
+
+#gnav li {
+  list-style: none;
+}
+
+#gnav .pc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#gnav .pc .company-name a,
+#gnav .pc ul a {
   -webkit-transition: background-color .15s;
   transition: background-color .15s;
 }
 
-#gnav ul a:hover {
+#gnav .pc ul a:hover {
   background-color: rgba(255, 255, 255, 0.2);
 }
 
-#gnav .company-name {
+#gnav .pc .company-name {
   margin: 0 0 0 1.5em;
 }
 
-#gnav .navi {
+#gnav .pc .navi {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: 0 1.5em 0 0;
 }
 
-#gnav ul {
+#gnav .pc ul {
   margin: 0;
   padding: .3em 0;
   display: -webkit-box;
@@ -90,9 +109,96 @@ section {
   gap: 1em;
 }
 
-#gnav ul li {
+#gnav .pc ul li {
   margin: .5em 1em;
   list-style: none;
+}
+
+#gnav .mobile-gnav {
+  display: none;
+  width: 100%;
+}
+
+#gnav .mobile-gnav .navi {
+  display: none;
+}
+
+#gnav .mobile-gnav .navi.active {
+  display: block;
+}
+
+#gnav .mobile-gnav ul {
+  margin: 0;
+  padding: 0;
+}
+
+#gnav .mobile-gnav ul li {
+  margin: 0;
+  padding: .5em;
+  text-align: center;
+}
+
+#gnav .mobile-gnav ul a:nth-child(1) li {
+  border-top: 1px solid #777;
+}
+
+#gnav .mobile-gnav ul a:nth-child(odd) li {
+  background-color: #3a443d;
+}
+
+#gnav .mobile-gnav .humburger-menu {
+  margin: .5em;
+  position: relative;
+  background: transparent;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+}
+
+#gnav .mobile-gnav .humburger-menu span {
+  display: inline-block;
+  -webkit-transition: all .4s;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: #fff;
+  width: 45%;
+}
+
+#gnav .mobile-gnav .humburger-menu span:nth-of-type(1) {
+  top: 15px;
+}
+
+#gnav .mobile-gnav .humburger-menu span:nth-of-type(2) {
+  top: 23px;
+}
+
+#gnav .mobile-gnav .humburger-menu span:nth-of-type(3) {
+  top: 31px;
+}
+
+#gnav .mobile-gnav .humburger-menu.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  -webkit-transform: translateY(6px) rotate(-45deg);
+          transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+#gnav .mobile-gnav .humburger-menu.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+#gnav .mobile-gnav .humburger-menu.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  -webkit-transform: translateY(-6px) rotate(45deg);
+          transform: translateY(-6px) rotate(45deg);
+  width: 30%;
 }
 
 #bar h2 {
@@ -525,19 +631,28 @@ section {
 }
 
 @media screen and (max-width: 700px) {
-  #gnav .company-name {
-    margin: 0 0 0 .5em;
+  #gnav .pc {
+    display: none;
   }
-  #gnav .navi {
-    margin: 0;
+  #gnav .mobile-gnav {
+    display: block;
   }
-  #gnav ul {
-    margin-left: 1em;
-    gap: 0;
+  #gnav .mobile-gnav .top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  #gnav ul li {
-    margin: .5em .75em;
-    list-style: none;
+  #archives .socials {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #bar header h1 {
     font-size: 2em;
