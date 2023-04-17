@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+JP&display=swap");
+@import url("./global.css");
+form {
+  margin: 0 auto;
+  width: 90%;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+#form {
+  width: 50%;
+  margin: 0 auto;
+}
+
+form button {
+  padding: .5em 2em;
+  font-size: .8em;
+  background-color: #003366;
+  color: white;
+  border-radius: 5px;
+  outline: none;
+  border: 0;
+  -webkit-filter: drop-shadow(3px 3px 3px #222);
+          filter: drop-shadow(3px 3px 3px #222);
+}
+
+form button:hover {
+  background-color: #004488;
+}
+
+form button:active {
+  -webkit-filter: none;
+          filter: none;
+  background-color: #003366;
+}
+
+input,
+textarea,
+select {
+  width: calc(100% - 30px);
+  padding: 10px 15px;
+  color: white;
+  background-color: rgba(119, 119, 119, 0.1);
+  border: 1px solid #005588;
+  font-family: 'Yu Gothic Thin';
+  font-size: 1.1rem;
+  letter-spacing: .1em;
+}
+
+textarea:focus,
+select:focus,
+input:focus {
+  -webkit-box-shadow: 1px 1px 10px 0 rgba(0, 170, 255, 0.5);
+          box-shadow: 1px 1px 10px 0 rgba(0, 170, 255, 0.5);
+  outline: 0;
+}
+
+option {
+  color: var(--text);
+  background-color: var(--background);
+}
+
+option:focus {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+select {
+  width: auto;
+}
+
+#message-address {
+  font-family: Consolas;
+  letter-spacing: 0;
+}
+
+#response {
+  padding: 1px;
+}
+
+#response.done {
+  margin: 1em 2em;
+  padding: .5em 2em;
+  background-color: #33663366;
+  border: 1px solid green;
+  border-radius: 5px;
+}
+
+#response.error {
+  margin: 1em 2em;
+  padding: .5em 2em;
+  background-color: #33330066;
+  border: 1px solid #666600;
+  border-radius: 5px;
+}
+
+#response:empty {
+  border: none;
+  background-color: transparent;
+}
+
+.align-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+form button.disable {
+  pointer-events: none;
+  background-color: #666;
+  cursor: none;
+}
+/*# sourceMappingURL=contact.css.map */

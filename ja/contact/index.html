@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Canola Ent.</title>
+  <link rel="stylesheet" href="../../src/css/contact.css">
+  <script src="../../src/js/script-form-submit.js"></script>
+</head>
+
+<body id="body">
+
+  <header>
+    <figure>
+      <img id="header-image" src="" alt="">
+      <img id="header-logo" src="../../src/img/global/atrangel.png" alt="">
+    </figure>
+  </header>
+
+  <div id="response" class=""></div>
+
+  <main id="top">
+
+    <section id="form">
+      <h3>応募フォーム</h3>
+      <form
+            action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSd9yBkPWhYHACjnrswAGl3qYPE-6LcAJYpRSM0h4HEJQtUpvA/formResponse"
+            method="post"
+            target="hidden_iframe">
+        <dl>
+          <dt>お名前</dt>
+          <dd><input name="entry.58235561" type="text" id="form-name"></dd>
+        </dl>
+        <dl>
+          <dt>ご用件</dt>
+          <dd><!--テンプレート：
+            <select name="require" id="require-template">
+              <option value="1">BAR ATRANGELについて</option>
+              <option value="2">ウェブサイト制作のご依頼</option>
+              <option value="3">その他</option>
+            </select>-->
+          </dd>
+          <dd>
+            <textarea name="entry.127901749" id="message-content"
+                      rows="10"></textarea>
+          </dd>
+        </dl>
+        <dl>
+          <dt>ご返信先</dt>
+          <dd><!--
+            <select name="reply-to" id="message-reply">
+              <option value="1">Twitter</option>
+              <option value="2">Discord</option>
+              <option value="3">E-mail</option>
+            </select>-->
+          </dd>
+          <dd><input name="entry.724851387" type="text" id="form-reply-to"></dd>
+        </dl>
+        <div class="align-right">
+          <button type="submit" id="submit-button">送信</button>
+        </div>
+      </form>
+    </section>
+
+    <iframe
+            name="hidden_iframe"
+            id="hidden_iframe"
+            style="display: none"
+            onload="if(submitFlag){;}">
+    </iframe>
+
+  </main>
+
+  <nav id="menu">
+    <div class="__left">
+      <figure>
+        <img src="../../src/img/icon.png" alt="">
+      </figure>
+      <h1>CANOLA ENTERTAINMENT</h1>
+    </div>
+    <div class="__right">
+      <ul>
+        <a href="../index.html">
+          <li>TOP</li>
+        </a>
+        <a href="../bar/index.html">
+          <li>BAR</li>
+        </a><!--
+        <a href="../goods/index.html">
+          <li>GOODS</li>
+        </a>
+        -->
+        <a href="../contact/index.html">
+          <li>CONTACT</li>
+        </a>
+      </ul>
+    </div>
+  </nav>
+
+  <div id="loading">
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="circle"></div>
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+    <div class="shadow"></div>
+  </div>
+
+  <footer>
+    &copy; Canola Entertainment
+  </footer>
+  <script src="../../src/js/scripts.js"></script>
+</body>
+
+</html>
